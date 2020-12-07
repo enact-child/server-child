@@ -6,6 +6,10 @@
 </head>
 <body>
     <script>
+        window.addEventListener('error', function(e) {
+            console.log(e.error);
+        })
+
         try {
             if (window.parent.document.location.protocol) {
                 let img = document.createElement('img');
