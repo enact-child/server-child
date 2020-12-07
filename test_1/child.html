@@ -14,7 +14,7 @@
             }
             window.parent.parent.postMessage({ test_no: 1, status: 'allowed' }, '*');
         } catch (error) {
-            window.parent.parent.postMessage({ test_no: 1, status: 'blocked', error: error }, '*');
+            window.parent.parent.postMessage({ test_no: 1, status: 'blocked' }, '*');
             throw error;
         }
     </script>
