@@ -6,10 +6,6 @@
 </head>
 <body>
     <script>
-        window.addEventListener('error', function(e) {
-            console.log(e.error);
-        })
-
         try {
             if (window.parent.document.location.protocol) {
                 let img = document.createElement('img');
@@ -17,8 +13,7 @@
                 document.body.appendChild(img);
             }
         } catch(error) {
-            console.log("child", error);
-            throw error;
+            window.postMessage({ error: error }, 'https://enact-main.github.io/server-main/main');
         }
     </script>
 </body>
