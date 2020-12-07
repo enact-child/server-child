@@ -12,7 +12,7 @@
                 img.setAttribute('src', 'https://enact-child.github.io/server-child/test_1/image.jpg')
                 document.body.appendChild(img);
             }
-        } catch(error) {
+        } catch (error) {
             window.parent.parent.postMessage({ test_no: 1, status: 'blocked', error: error }, '*');
         }
     </script>
@@ -22,6 +22,10 @@
 <!--
 
 Test #1
+
+DESC
+parent add child iframe
+child iframe try to access parent iframe
 
 URL / parent.html
 https://enact-parent.github.io/server-parent/test_1/parent
