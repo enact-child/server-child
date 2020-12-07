@@ -13,7 +13,8 @@
                 document.body.appendChild(img);
             }
         } catch(error) {
-            window.parent.parent.postMessage({ error: error }, '*');
+            let msg = { test_no: 1, status: 'blocked', error: error }
+            window.parent.parent.postMessage({ msg: msg }, '*');
         }
     </script>
 </body>
