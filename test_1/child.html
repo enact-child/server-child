@@ -13,7 +13,7 @@
                 document.body.appendChild(img);
             }
         } catch(error) {
-            window.postMessage({ error: error }, 'https://enact-main.github.io/server-main/main');
+            window.parent.parent.postMessage({ error: error }, '*');
         }
     </script>
 </body>
