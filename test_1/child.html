@@ -12,8 +12,10 @@
                 img.setAttribute('src', 'https://enact-child.github.io/server-child/test_1/image.jpg')
                 document.body.appendChild(img);
             }
+            window.parent.parent.postMessage({ test_no: 1, status: 'allowed' }, '*');
         } catch (error) {
             window.parent.parent.postMessage({ test_no: 1, status: 'blocked', error: error }, '*');
+            throw error;
         }
     </script>
 </body>
